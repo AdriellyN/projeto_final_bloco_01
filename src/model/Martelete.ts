@@ -20,7 +20,7 @@ export class Martelete extends Ferramentas {
         }
     
         public visualizar(): void {
-    
+            super.visualizar();
             console.log(`Marca da Ferramenta: ${this._marca}`)
         }
     

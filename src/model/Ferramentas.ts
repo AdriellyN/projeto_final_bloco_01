@@ -58,7 +58,7 @@ export abstract class Ferramentas {
         console.log("--------------------------------------------------")
         console.log(`Código do produto (ID): ${this._id}`)
         console.log("Tipo: " + tipo)
-        console.log(`Peso: ${this._peso}`)
+        console.log(`Peso (em kg): ${this._peso}`)
         console.log(`Período de locação (em dias corridos): ${this._periodoLocacao}`)
     }
 
