@@ -1,12 +1,12 @@
 import readlinesync = require("readline-sync");
+import { colors } from "./src/util/Cores";
 
 export function main() {
 
     let opcao: number;
 
     while (true) {
-        
-        console.log("**************************************************************");
+        console.log(colors.bg.black,colors.fg.redstrong,"**************************************************************");
         console.log("                                                              ");
         console.log("       Ferramentals Loc. - Aluguel por Demanda                ");
         console.log("                                                              ");
@@ -19,51 +19,51 @@ export function main() {
         console.log("               5 - Deletar Ferramenta                         ");
         console.log("               0 - Sair                                       ");
         console.log("                                                              ");
-        console.log("**************************************************************");
+        console.log("**************************************************************",colors.reset);
 
         console.log("Entre com a opção desejada: ");
         opcao = readlinesync.questionInt("");
 
         if (opcao == 0) {
-            console.log("\nPrograma Finalizado.");
+            console.log(colors.fg.black,"\nPrograma Finalizado.");
             sobre();
             process.exit(0);
         }
 
         switch (opcao) {
             case 1:
-                console.log("\nCadastrar Ferramenta \n");
+                console.log(colors.fg.whitestrong,"\nCadastrar Ferramenta \n", colors.reset);
 
                 keyPress();
                 break;
 
             case 2:
-                console.log("\nListar Todas as Ferramentas \n");
+                console.log(colors.fg.whitestrong,"\nListar Todas as Ferramentas \n", colors.reset);
                 
                 keyPress();
                 break;
 
             case 3:
-                console.log("\nConsultar Ferramenta por Id \n");
+                console.log(colors.fg.whitestrong,"\nConsultar Ferramenta por Id \n", colors.reset);
 
                 keyPress();
                 break;
 
 
             case 4:
-                console.log("\nAtualizar dados da Ferramenta");
+                console.log(colors.fg.whitestrong,"\nAtualizar dados da Ferramenta", colors.reset);
                 
                 keyPress();
                 break;
 
             case 5:
-                console.log("\nDeletar Ferramenta");
+                console.log(colors.fg.whitestrong,"\nDeletar Ferramenta", colors.reset);
                 
                 keyPress();
                 break;
 
             default:
-                console.log("\nOpção Inválida!");
+                console.log(colors.fg.whitestrong,"\nOpção Inválida!", colors.reset);
                 keyPress();
                 break;
         }
