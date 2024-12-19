@@ -2,7 +2,7 @@ import { Ferramentas } from "../model/Ferramentas";
 
 export interface FerramentaRepository{
 
-    // CRUD da Farmácia
+    // CRUD 
     cadastrarFerramenta(ferramenta: Ferramentas): void;
     listarTodasFerramenta(): void;
     consultarFerramentaPorId(id: number): void;
